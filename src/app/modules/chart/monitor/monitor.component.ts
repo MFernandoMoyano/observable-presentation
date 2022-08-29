@@ -27,6 +27,7 @@ export class MonitorComponent {
     this.renderer.addClass(div, 'emission' );
     this.renderer.addClass(div, emission.color );
     this.renderer.addClass(div, emission.type );
+    this.renderer.setAttribute(div, 'style', `scale: ${emission.scale || 1}`)
     this.renderer.appendChild(this.monitorRef?.nativeElement, div)
   }
 

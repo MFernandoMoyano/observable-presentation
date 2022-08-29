@@ -7,10 +7,11 @@ import { HeaderComponent } from './modules/header/header.component';
 import { InfoComponent } from './modules/info/info.component';
 import { ChartComponent } from './modules/chart/chart.component';
 import { HistoryComponent } from './modules/history/history.component';
-import { FabulaComponent } from './modules/fabula/fabula.component';
+import { InteractiveComponent } from './modules/interactive/interactive.component';
 import { ObserverComponent } from './modules/chart/observer/observer.component';
 import { ObservableComponent } from './modules/chart/observable/observable.component';
 import { MonitorComponent } from './modules/chart/monitor/monitor.component';
+import { PartesComponent } from './modules/partes/partes.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +19,13 @@ import { MonitorComponent } from './modules/chart/monitor/monitor.component';
     HeaderComponent,
     InfoComponent,
     ChartComponent,
+    InteractiveComponent,
     HistoryComponent,
-    FabulaComponent,
+    InfoComponent,
     ObserverComponent,
     ObservableComponent,
-    MonitorComponent
+    MonitorComponent,
+    PartesComponent
   ],
   imports: [
     BrowserModule,

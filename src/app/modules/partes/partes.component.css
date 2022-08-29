@@ -1,0 +1,92 @@
+div.compare {
+  display: flex;
+  width: 80%;
+  margin: 2em 10%;
+  margin-top: 2em;
+  margin-bottom: 5em;
+}
+
+div.compare > div {
+  display: block;
+  width: 48%;
+  margin: 0 1%;
+}
+
+div.compare h3 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+div.block {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  background-color: #f8eeff;
+  padding: .5em;
+  border-radius: .5em;
+  border: .2em solid white;
+}
+
+div.block img {
+  margin-bottom: .5em;
+  margin-top: .5em;
+  width: 3em;
+}
+
+div.block p {
+  width: 100%;
+  text-align: center;
+}
+
+.row-layout {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: .5em;
+}
+
+@keyframes blocking {
+  0% { margin-left: 0%; }
+  10% { margin-left: 0%; }
+  25% { margin-left: 25%; }
+  35% { margin-left: 25%; }
+  50% { margin-left: 50%; }
+  60% { margin-left: 50%; }
+  75% { margin-left: 75%; }
+  85% { margin-left: 75%; }
+  100% { margin-left: 0%; }
+}
+
+.disc:not(.signal){
+  position: relative;
+  width: 25% !important;
+  flex: none;
+  margin-top: 2em;
+  background-color: rgb(255, 177, 177) !important;
+
+  animation-name: blocking;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+}
+
+.disc:not(.signal)::before {
+  display: block;
+  content: '';
+  position: absolute;
+  height: 3em;
+  bottom: 100%;
+  width: 2px;
+  background-color: rgb(174, 174, 174);
+}
+
+h1 {
+  margin-left: 10%;
+}
+
+.description {
+  font-size: 1.2em;
+}

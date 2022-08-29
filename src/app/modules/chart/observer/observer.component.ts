@@ -28,7 +28,7 @@ export class ObserverComponent {
     this.subscription = obs.subscribe( em => { this.input?.drawNew(em) })
   }
 
-  setUotput(obs: Observable<Emission>) {
+  setUotputObservable(obs: Observable<Emission>) {
     obs.subscribe( em => { this.output?.drawNew(em) })
   }
 }

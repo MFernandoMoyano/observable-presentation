@@ -1,4 +1,7 @@
+import { compileDeclareInjectableFromMetadata } from '@angular/compiler';
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { filter, map, Observable } from 'rxjs';
+import { Emission } from './observable.service';
 import { ObserverComponent } from './observer/observer.component';
 
 @Component({
@@ -16,11 +19,23 @@ export class ChartComponent implements AfterViewInit {
 
 
   ngAfterViewInit(): void {
-    this.radio1?.setUotput(this.radio1.inputObservable);
-    this.radio2?.setUotput(this.radio2.inputObservable);
-    this.radio3?.setUotput(this.radio3.inputObservable);
-    this.radio4?.setUotput(this.radio4.inputObservable);
-    this.radio5?.setUotput(this.radio5.inputObservable);
+    this.radio1?.setUotputObservable(this.radio1.inputObservable);
+    this.radio2?.setUotputObservable(this.radio2.inputObservable);
+    this.radio3?.setUotputObservable(this.radio3.inputObservable);
+    this.radio4?.setUotputObservable(this.radio4.inputObservable);
+    this.radio5?.setUotputObservable(this.radio5.inputObservable);
   }
 
 }
+
+/* 
+  ObserverComponent expone los siguientes elementos:
+
+    atributos:
+      inputObservable: expone el observable original (señal de radio);
+      label: Necesario por angular, no lo usaremos.
+
+    metodos:
+      changeInputObservable: cambia el observable inicial (radio) por cualquier otro compatible.
+      setOuputObservable: Cambia la salida (observable) de nuestra radio.
+ */

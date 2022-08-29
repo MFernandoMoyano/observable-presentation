@@ -1,0 +1,271 @@
+<div class="badge">
+  <p>Bien, recapitulemos</p>
+</div>
+
+<div class="compare">
+  <div>
+    <h3>Problema</h3>
+
+    <div class="row-layout">
+      <div class="block">
+        <img src="./assets/user.png" />
+        <p>Enrique</p>
+      </div>
+      <div class="block">
+        <img src="./assets/user.png" />
+        <p>Lius</p>
+      </div>
+      <div class="block">
+        <img src="./assets/user.png" />
+        <p>César</p>
+      </div>
+      <div class="block">
+        <img src="./assets/user.png" />
+        <p>Miguel</p>
+      </div>
+    </div>
+
+    <div class="row-layout">
+      <div class="block disc">
+        <img src="./assets/vinyl.png" alt="" />
+        <p>El fantasma de la ópera [full album]</p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h3>Solución</h3>
+    <div class="row-layout">
+      <div class="block">
+        <img src="./assets/user.png" />
+        <p>Enrique</p>
+      </div>
+      <div class="block">
+        <img src="./assets/user.png" />
+        <p>Lius</p>
+      </div>
+      <div class="block">
+        <img src="./assets/user.png" />
+        <p>César</p>
+      </div>
+      <div class="block">
+        <img src="./assets/user.png" />
+        <p>Miguel</p>
+      </div>
+    </div>
+    <div class="row-layout">
+      <div class="block">
+        <img src="./assets/radio.png" />
+        <p>radio</p>
+      </div>
+      <div class="block">
+        <img src="./assets/radio.png" />
+        <p>radio</p>
+      </div>
+      <div class="block" [style.flex]="2">
+        <img src="./assets/radio.png" />
+        <p>radio</p>
+      </div>
+    </div>
+
+    <div class="row-layout">
+      <div class="block disc signal">
+        <img src="./assets/signal.png" alt="" />
+        <p>El fantasma de la ópera [full album]</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <h1>Partes</h1>
+
+  <div class="compare">
+    <div>
+      <div class="row-layout">
+        <div class="block">
+          <img src="./assets/user.png" />
+          <p>Enrique</p>
+        </div>
+        <div class="block">
+          <img src="./assets/user.png" />
+          <p>Lius</p>
+        </div>
+        <div class="block">
+          <img src="./assets/user.png" />
+          <p>César</p>
+        </div>
+        <div class="block">
+          <img src="./assets/user.png" />
+          <p>Miguel</p>
+        </div>
+        <div class="block">
+          <img src="./assets/left-arrow.png" />
+          <p>Subscribers</p>
+        </div>
+      </div>
+
+      <div class="row-layout">
+        <div class="block">
+          <img src="./assets/radio.png" />
+          <p>radio</p>
+        </div>
+        <div class="block">
+          <img src="./assets/radio.png" />
+          <p>radio</p>
+        </div>
+        <div class="block" [style.flex]="2">
+          <img src="./assets/radio.png" />
+          <p>radio</p>
+        </div>
+        <div class="block">
+          <img src="./assets/left-arrow.png" />
+          <p>pipes</p>
+        </div>
+      </div>
+
+      <div class="row-layout">
+        <div class="block disc signal" [style.flex]="4">
+          <img src="./assets/signal.png" />
+          <p>El fantasma de la ópera [full album]</p>
+        </div>
+        <div class="block">
+          <img src="./assets/left-arrow.png" />
+          <p>Observable</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="description" style="margin-top: 1em">
+      <p>En el diagrama podemos encontrar 3 elementos principales:</p>
+
+      <ol [style.marginLeft]="'3em'" [style.marginTop]="'1em'">
+        <li>Subscriptores - subscribers</li>
+        <li>Tranformadores - pipes</li>
+        <li>Observable</li>
+      </ol>
+
+      <p style="margin-top: 1em">
+        Primero tenemos los <b>observables</b>, que son (asi como una emisión de
+        radio) todos aquellos objetos a los que podemos <i>escuchar</i>.
+      </p>
+      <p style="margin-top: 0.5em">
+        Pero si vemos un poco mas allá, detras de la transmisión radiofónica,
+        hay un equipamiento (antenas, equipos moduladores) que son los que
+        producen y emiten esa onda, en programación esto se llama
+        <b>subject</b>. Y realmente es este <b>subject</b> el que puede decidir
+        si emitir una señal o no, y el origen de todo.
+      </p>
+
+      <div class="note">todos los subjects exponen un observable</div>
+    </div>
+  </div>
+  <div class="compare">
+    <div class="description">
+      <h2>Pipes</h2>
+      <p style="margin-top: 1em">
+        Los <b>pipes</b>, en nuestro caso la radio, son elementos encargados de
+        transformar cada emision y exponer en un nuevo <b>observable</b> su
+        resultado.
+      </p>
+      <p style="margin-top: 0.5em">
+        Cada vez que <i>escuchemos</i> una <b>emision</b> (nota musical o
+        sonido) de un <b>observable</b> (transmision radiofónica) vamos a
+        relizar una acción (decodificar onda radial en onda de sonido).
+      </p>
+      <div class="note">
+        un <b>pipe</b> escucha un <b>observable</b>, modifica su
+        <b>emision</b> y la expone nuevamente
+      </div>
+      <p style="margin-top: 0.5em">
+        Entre las modificaciones que puede hacer un pipe se encuentran,
+        modificar totalmente la emision, filtrar algunas emisiones y realizar
+        acciones secundarias que no modifican las emisiones (reaccionar).
+      </p>
+    </div>
+    <div class="description">
+      <h2>Subscriptors</h2>
+      <p style="margin-top: 1em">
+        Los <b>subscriptores</b> son los consumidores finales de nuestras
+        emisiones (personas). Estos consumidores solamente reaccionan (realizan acciones) a las
+        emisiones, en nuestro caso disfrutan de la musica.
+      </p>
+      <div class="note">
+        En programación no interesa mucho el subscriptor, sino que nos centraremos en la subscripción en si.
+      </div>
+    </div>
+  </div>
+</div>
+
+<h1>Resumen</h1>
+<div style="flex-direction: column; width: 30%; margin: 2em 35%">
+  <div class="row-layout">
+    <div class="block">
+      <img src="./assets/signal.png" />
+      <p>antena</p>
+    </div>
+    <div class="block">
+      <img src="./assets/left-arrow.png" />
+      <p>subject</p>
+    </div>
+    <div class="block" [style.flex]="2">
+      <h3 style="margin-bottom: .5em;">Responsabilidad</h3>
+      <p>Decide que y cuando emite </p>
+    </div>
+  </div>
+  <div class="row-layout">
+    <div class="block">
+      <img src="./assets/wave.png" />
+      <p>Onda radial</p>
+    </div>
+    <div class="block">
+      <img src="./assets/left-arrow.png" />
+      <p>Observable</p>
+    </div>
+    <div class="block" [style.flex]="2">
+      <h3 style="margin-bottom: .5em;">Responsabilidad</h3>
+      <p>Transporta información y brinda una forma de escucharla</p>
+    </div>
+  </div>
+  <div class="row-layout">
+    <div class="block">
+      <img src="./assets/radio.png" />
+      <p>antena</p>
+    </div>
+    <div class="block">
+      <img src="./assets/left-arrow.png" />
+      <p>Pipe</p>
+    </div>
+    <div class="block" [style.flex]="2">
+      <h3 style="margin-bottom: .5em;">Responsabilidad</h3>
+      <p>Toma información y la transforma en nueva información</p>
+    </div>
+  </div>
+  <div class="row-layout">
+    <div class="block">
+      <img src="./assets/sound-wave.png" />
+      <p>Sonido</p>
+    </div>
+    <div class="block">
+      <img src="./assets/left-arrow.png" />
+      <p>Observable</p>
+    </div>
+    <div class="block" [style.flex]="2">
+      <h3 style="margin-bottom: .5em;">Responsabilidad</h3>
+      <p>Transporta información y brinda una forma de escucharla</p>
+    </div>
+  </div>
+  <div class="row-layout">
+    <div class="block">
+      <img src="./assets/user.png" />
+      <p>Enrique</p>
+    </div>
+    <div class="block">
+      <img src="./assets/left-arrow.png" />
+      <p>Subscriptor</p>
+    </div>
+    <div class="block" [style.flex]="2">
+      <h3 style="margin-bottom: .5em;">Responsabilidad</h3>
+      <p>Consume la información y reacciona</p>
+    </div>
+  </div>
+</div>

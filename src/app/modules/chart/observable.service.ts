@@ -8,6 +8,7 @@ type Colors = 'red' | 'purple' | 'blue' | 'green';
 export interface Emission {
   type: EmissionType;
   color: Colors;
+  scale?: number;
 }
 
 @Injectable({ providedIn: 'root' })
