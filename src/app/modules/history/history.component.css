@@ -1,0 +1,51 @@
+div {
+  position: relative;
+  padding: 3em;
+  overflow: hidden;
+  background-color: white;
+  font-size: 2em;
+}
+
+.badge img {
+  position: absolute;
+  top: -2em;
+  left: 0;
+  margin: .1em auto;
+  width: 100%;
+  opacity: .1;
+}
+
+.enrique {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.5em;
+  background-color: rgb(241, 241, 241);
+  margin: 1em 10%;
+  border-radius: 1em;
+  flex-wrap: wrap;
+  overflow: visible;
+}
+
+.enrique p {
+  display: block;
+  width: 100%;
+  margin-top: -3em;
+}
+
+.enrique img {
+  height: 1em;
+}
+
+.next {
+  height: .5em !important;
+  opacity: .1;
+}
+
+.done {
+  opacity: .1;
+}
+
+.big {
+  height: 3em !important;
+}

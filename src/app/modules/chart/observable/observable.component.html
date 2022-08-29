@@ -1,0 +1,13 @@
+<p>{{label}}</p>
+<div class="emissions">
+  <div class="btn red square" (click)="emit({ color: 'red', type: 'square'})"></div>
+  <div class="btn red circle" (click)="emit({ color: 'red', type: 'circle'})"></div>
+  <div class="btn purple square" (click)="emit({ color: 'purple', type: 'square'})"></div>
+  <div class="btn purple circle" (click)="emit({ color: 'purple', type: 'circle'})"></div>
+  <div class="btn blue square" (click)="emit({ color: 'blue', type: 'square'})"></div>
+  <div class="btn blue circle" (click)="emit({ color: 'blue', type: 'circle'})"></div>
+  <div class="btn green square" (click)="emit({ color: 'green', type: 'square'})"></div>
+  <div class="btn green circle" (click)="emit({ color: 'green', type: 'circle'})"></div>
+</div>
+
+<app-monitor #monitor></app-monitor>

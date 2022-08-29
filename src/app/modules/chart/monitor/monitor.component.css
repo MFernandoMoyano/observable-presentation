@@ -1,0 +1,64 @@
+
+div.monitor {
+  position: relative;
+  display: inline-block;
+  background-color: rgb(233, 233, 233);
+  border-radius: 3px;
+  height: 2em;
+  padding: .1em;
+  width: 15em;
+  padding: .2em;
+  overflow: hidden;
+}
+
+@keyframes emision {
+  0% { left: 0%; }
+  100% { left: 100%; }
+}
+
+div.emission {
+  height: 1em;
+  width: 1em;
+  position: absolute;
+  top: .5em;
+  left: 100%;
+
+  animation-name: emision;
+  animation-duration: 2000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+div.emission.circle {
+  border-radius: 1em;
+}
+
+div.emission.square {
+  border-radius: 0em;
+}
+
+div.emission.red {
+  background-color: red;
+}
+
+div.emission.purple {
+  background-color: purple;
+}
+
+div.emission.blue {
+  background-color: blue;
+}
+
+div.emission.green {
+  background-color: green;
+}
+
+div.timeline {
+  position: absolute;
+  top: 1em;
+  left: 0;
+  display: block;
+  width: 100%;
+  background-color: rgb(44, 44, 44);
+  height: 1px;
+}

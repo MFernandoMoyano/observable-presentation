@@ -1,0 +1,52 @@
+:host {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgb(173, 173, 173);
+  width: max-content;
+  padding: 1em;
+  border-radius: .5em;
+  margin-bottom: 2em;
+}
+
+p {
+  margin-right: 1em;
+}
+
+div.emissions {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 2em;
+  width: 20em;
+}
+
+div.emissions .btn {
+  display: block;
+  height: 1.5em;
+  width: 1.5em;
+  cursor: pointer;
+}
+
+div.emissions .btn.circle {
+  border-radius: 1em;
+}
+
+div.emissions .btn.square {
+  border-radius: 0em;
+}
+
+div.emissions .btn.red {
+  background-color: red;
+}
+
+div.emissions .btn.purple {
+  background-color: purple;
+}
+
+div.emissions .blue {
+  background-color: blue;
+}
+
+div.emissions .green {
+  background-color: green;
+}
